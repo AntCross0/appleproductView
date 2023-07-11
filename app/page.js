@@ -1,41 +1,30 @@
+'use client'
+
+
 import Image from 'next/image';
-import cyan from '/public/assets/media/hero_cyan.png';
-import black from '/public/assets/media/hero_black.png';
-import pink from '/public/assets/media/hero_pink.png';
-import green from '/public/assets/media/hero_green.png';
-import purple from '/public/assets/media/hero_purple.png';
+import { products } from '@/data/products';
+import { Buttons, ButtonIcon } from '@/components/Buttons';
+import ColorOptions from '@/components/ColorOptions';
+import { shoppingcart } from '@/public/shopping-cart.svg';
+import { useEffect } from 'react';
 
+const handleBuy = () => {
 
-const products = [{
-  color: '#8FC0D6',
-  lightColor: '#DBF0F9',
-  image: cyan,
-},
-{
-  color: '#91D68F',
-  lightColor: '#DBF9DF',
-  image: green,
-},
-{
-  color: '#D68FCA',
-  lightColor: '#F8DBF9',
-  image: pink,
-},
-{
-  color: '#646464',
-  lightColor: '#AEAEAE',
-  image: black,
-},
-{
-  color: '#9D8FD6',
-  lightColor: '#EBDBF9',
-  image: purple,
 }
-]
+
+const handleChangeColor = () => {
+
+}
 
 const counter = 2;
 
+
 export default function Home() {
+
+
+
+
+
   return (
     <main style={{ background: `radial-gradient(circle,${products[counter].lightColor} 10%,${products[counter].color} 100%)` }} className={`transition-all w-screen h-screen flex flex-col py-2 select-none`}>
       <navbar className='w-full h-16 flex flex-row justify-between px-4'>
@@ -47,19 +36,15 @@ export default function Home() {
         </div>
       </navbar>
       <div className='h-full grid grid-cols-2 place-content-center'>
-        <div className='flex flex-col py-8 space-y-12 px-12 justify-center'>
-          <h2 className='font-black text-6xl '>AirPods MAX</h2>
-          <p className='text-lg text-'>a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</p>
-          <div className='flex flex-row gap-4 w-full'>
-            <button className='h-12 w-12 rounded-full bg-red-400'>
-            </button>
-            <button className='h-12 w-12 rounded-full bg-red-400'>
-            </button>
-            <button className='h-12 w-12 rounded-full bg-red-400'>
-            </button>
-            <button className='h-12 w-12 rounded-full bg-red-400'>
-            </button>
-            <button className='place-self-end h-12 w-28 px-4 rounded-full bg-sky-500 text-white font-semibold mx-auto'>$549</button>
+        <div className='flex flex-col py-8 space-y-12 px-36 justify-center'>
+          <h2 className='font-bold text-slate-900 text-6xl '>AirPods MAX</h2>
+          <p className='text-lg text-slate-900'>a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</p>
+          <div className='flex flex-row gap-4 w-full justify-between'>
+            <ColorOptions options={products} />
+            <button className='transition-all bg-blue-600 hover:bg-blue-700 rounded-full px-8 py-2 font-bold text-white flex flex-row gap-4 justify-center items-center'>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+              </svg>$549</button>
           </div>
         </div>
         <div className='relative h-full '>
@@ -75,6 +60,5 @@ export default function Home() {
         </div>
       </div>
     </main >
-
   )
 }
