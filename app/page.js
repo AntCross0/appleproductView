@@ -60,14 +60,11 @@ export default function Home() {
 
 
   return (
-    <main id='background' className='transition-all w-full h-screen grid grid-cols-1 grid-rows-[7%,86%,%7] sm:grid-rows-1 sm:grid-cols-2 py-2 select-none'>
-
-      <Navbar />
-
-      <div className='h-full w-screen max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 place-content-center '>
-        <div className='flex flex-col py-8 md:space-y-12 px-2 sm:px-10 md:px-20 lg:px-36 justify-center order-2 sm:order-1'>
-          <h2 className='font-bold text-slate-900 text-6xl '>AirPods MAX</h2>
-          <p className='text-lg text-slate-900'>a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</p>
+    <main id='background' className=' transition-all w-full h-screen grid grid-cols-1 py-16 grid-rows-1 gap-4 sm:grid-rows-1 sm:grid-cols-2 select-none'>
+      <div className='relative h-full w-screen max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 place-content-center'>
+        <div className='flex flex-col py-8 space-y-2 md:space-y-12 px-2 sm:px-10 md:px-20 lg:px-36 justify-center order-2 sm:order-1'>
+          <h2 className='font-bold text-slate-900 text-2xl sm:text-6xl '>AirPods MAX</h2>
+          <p className='text-md font-semibold sm:font-normal sm:text-lg text-slate-900'>a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</p>
           <div className='flex flex-col sm:flex-row gap-4 w-full justify-between'>
             <ColorOptions />
             <Buttons textColor='white' styleClass='transition-all bg-blue-600 hover:bg-blue-700 hover:scale-110 rounded-full px-8 py-2 font-bold text-white flex flex-row gap-4 justify-center items-center' text={<>
@@ -76,11 +73,11 @@ export default function Home() {
               </svg><span>$549</span></>}></Buttons>
           </div>
         </div>
-        <div className='relative order-1 sm:order-2'>
+        <div className='relative mt-12 order-1 sm:order-2 '>
           <PrevImage counter={counter} products={products} action={handlePrev} />
           <NextImage counter={counter} products={products} action={handleNext} />
-          <div id='image' className='py-20'>
-            <Image priority={true} src={products[counter].image} alt='product' width={1200} height={300} />
+          <div id='image' className='py-2 sm:py-20'>
+            <Image className='w-[380px]  md:w-[1200px]' priority={true} src={products[counter].image} alt='product' />
           </div>
           <div className='bottom-4 absolute mx-auto flex flex-row justify-center items-center gap-4 w-full '>
             <Buttons id='navButtons' action={handlePrev} styleClass='transition-all bg-slate-900 rounded-full text-white p-3 hover:scale-105'
@@ -96,7 +93,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </main >
   )
 }
