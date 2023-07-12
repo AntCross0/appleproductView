@@ -16,6 +16,10 @@
     animation: fade-custom 300ms forwards cubic-bezier(1, -1.37, 1, .41);
 }
 
+.move-left {
+    animation: move-left 300ms forwards ease-in-out;
+}
+
 
 @keyframes prev-animation {
 
@@ -45,10 +49,22 @@
 
 @keyframes fade-custom {
     0% {
-        background-position-x: 400px;
+        filter: saturate(1)
     }
 
     100% {
-        background-position-x: 0px;
+        filter: saturate(0)
+    }
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
