@@ -1,9 +1,10 @@
 import React from 'react';
 import { shoppincart } from '@/public/shopping-cart.svg';
 
-const Buttons = ({ bgcolor, textColor, text, styleClass }) => {
+const Buttons = ({ bgcolor, textColor, text, styleClass, action }) => {
     return (
         <button
+            onClick={action}
             className={styleClass}
             style={{
                 backgroundColor: bgcolor,
@@ -12,20 +13,8 @@ const Buttons = ({ bgcolor, textColor, text, styleClass }) => {
     )
 }
 
-const ButtonIcon = ({ bgcolor, textColor, text, styleClass, svg }) => {
-    return (
-        <button className={styleClass} style={{
-            backgroundColor: bgcolor,
-            color: textColor,
-        }}>
-            {shoppincart}
-            {text}
-        </button>
-    )
-}
 
 export default Buttons;
-export { Buttons, ButtonIcon };
 
 
 

@@ -9,25 +9,30 @@ export const products = [{
     color: '#8FC0D6',
     lightColor: '#DBF0F9',
     image: cyan,
+    tag: 'cyan'
 },
 {
     color: '#91D68F',
     lightColor: '#DBF9DF',
     image: green,
+    tag: 'green'
 },
 {
     color: '#D68FCA',
     lightColor: '#F8DBF9',
     image: pink,
+    tag: 'pink'
 },
 {
     color: '#646464',
     lightColor: '#AEAEAE',
     image: black,
+    tag: 'black'
 },
 {
     color: '#9D8FD6',
     lightColor: '#EBDBF9',
     image: purple,
+    tag: 'purple'
 }
 ];
