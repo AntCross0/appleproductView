@@ -13,7 +13,7 @@
 }
 
 .fade-custom {
-    animation: fade-custom 300ms forwards ease-in-out;
+    animation: fade-custom 300ms forwards cubic-bezier(1, -1.37, 1, .41);
 }
 
 

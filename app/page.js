@@ -29,7 +29,6 @@ export default function Home() {
     }
   }
 
-
   const handlePrev = () => {
     const background = document.querySelector('#background');
     const image = document.querySelector('#image');
@@ -61,14 +60,6 @@ export default function Home() {
 
   return (
     <main id='background' className={`transition-all w-screen h-screen flex flex-col py-2 select-none`}>
-      <navbar className='w-full h-16 flex flex-row justify-between px-4'>
-        <div className=''>Airpods Max</div>
-        <div className='flex flex-row gap-x-4'>
-          <span>Gallery</span>
-          <span>Overview</span>
-          <span>My account</span>
-        </div>
-      </navbar>
       <div className='h-full grid grid-cols-2 place-content-center'>
         <div className='flex flex-col py-8 space-y-12 px-36 justify-center'>
           <h2 className='font-bold text-slate-900 text-6xl '>AirPods MAX</h2>
@@ -85,7 +76,7 @@ export default function Home() {
           <PrevImage counter={counter} products={products} action={handlePrev} />
           <NextImage counter={counter} products={products} action={handleNext} />
           <div id='image' className='py-20'>
-            <Image src={products[counter].image} alt='product' width={1200} height={300} />
+            <Image priority={true} src={products[counter].image} alt='product' width={1200} height={300} />
           </div>
           <div className='bottom-4 absolute mx-auto flex flex-row justify-center items-center gap-4 w-full '>
             <Buttons id='navButtons' action={handlePrev} styleClass='transition-all bg-slate-900 rounded-full text-white p-3 hover:scale-105'
