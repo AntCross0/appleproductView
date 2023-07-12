@@ -7,6 +7,9 @@ import ColorOptions from '@/components/ColorOptions';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { NextImage, PrevImage } from '@/components/PrevAndNext';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
 
 
 export default function Home() {
@@ -58,6 +61,9 @@ export default function Home() {
 
   return (
     <main id='background' className={`transition-all w-screen h-screen flex flex-col py-2 select-none`}>
+      <header>
+        <Navbar />
+      </header>
       <div className='h-full grid grid-cols-2 place-content-center'>
         <div className='flex flex-col py-8 space-y-12 px-36 justify-center'>
           <h2 className='font-bold text-slate-900 text-6xl '>AirPods MAX</h2>
@@ -90,6 +96,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </main >
   )
 }

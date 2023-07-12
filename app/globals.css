@@ -49,11 +49,11 @@
 
 @keyframes fade-custom {
     0% {
-        filter: saturate(1)
+        opacity: 0.90;
     }
 
     100% {
-        filter: saturate(0)
+        opacity: 1;
     }
 }
 
