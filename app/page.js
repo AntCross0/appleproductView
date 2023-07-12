@@ -6,6 +6,7 @@ import Buttons from '@/components/Buttons';
 import ColorOptions from '@/components/ColorOptions';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { NextImage, PrevImage } from '@/components/PrevAndNext';
 
 
 export default function Home() {
@@ -15,6 +16,11 @@ export default function Home() {
 
 
   const handleNext = () => {
+    const background = document.querySelector('#background');
+    const image = document.querySelector('#image');
+
+    background.classList.add('fade-custom');
+    image.classList.add('next-animation');
     if (counter === products.length - 1) {
       setCounter(0);
     }
@@ -25,17 +31,31 @@ export default function Home() {
 
 
   const handlePrev = () => {
+    const background = document.querySelector('#background');
+    const image = document.querySelector('#image');
+
+    image.classList.add('prev-animation');
+    background.classList.add('fade-custom');
     if (counter === 0) {
       setCounter(products.length - 1);
     }
     else {
       setCounter(counter - 1);
     }
+
+
   }
 
   useEffect(() => {
     const background = document.querySelector('#background');
+    const image = document.querySelector('#image');
     background.style.background = `radial-gradient(circle,${products[counter].lightColor} 10%,${products[counter].color} 100%)`;
+    setTimeout(() => {
+      background.classList.remove('fade-custom');
+      image.classList.remove('next-animation');
+      image.classList.remove('prev-animation');
+    }, 300);
+
   }, [counter]);
 
 
@@ -62,19 +82,19 @@ export default function Home() {
           </div>
         </div>
         <div className='relative'>
-
-          <div className='py-20'>
+          <PrevImage counter={counter} products={products} action={handlePrev} />
+          <NextImage counter={counter} products={products} action={handleNext} />
+          <div id='image' className='py-20'>
             <Image src={products[counter].image} alt='product' width={1200} height={300} />
           </div>
           <div className='bottom-4 absolute mx-auto flex flex-row justify-center items-center gap-4 w-full '>
-            <Buttons action={handlePrev} styleClass='transition-all bg-slate-900 rounded-full text-white p-3 hover:scale-105'
+            <Buttons id='navButtons' action={handlePrev} styleClass='transition-all bg-slate-900 rounded-full text-white p-3 hover:scale-105'
               text={
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
                 </svg>
               }></Buttons>
-            <span>{counter + 1}</span>
-            <Buttons action={handleNext} styleClass='transition-all bg-slate-900 rounded-full text-white p-3 hover:scale-105' text={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <Buttons id='navButtons' action={handleNext} styleClass='transition-all bg-slate-900 rounded-full text-white p-3 hover:scale-105' text={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
             </svg>
             }></Buttons>

@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.prev-animation {
+    animation: prev-animation 300ms forwards ease-in-out;
+}
+
+.next-animation {
+    animation: next-animation 300ms forwards ease-in-out;
+}
+
+.fade-custom {
+    transition: color ease-in-out 10s;
+}
+
+
+
+@keyframes prev-animation {
+
+    0% {
+        transform-origin: top;
+        transform: translateX(30%) scale(0.25);
+    }
+
+    100% {
+        transform-origin: center;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes next-animation {
+
+    0% {
+        transform-origin: bottom;
+        transform: translateX(30%) scale(0.25);
+    }
+
+    100% {
+        transform-origin: center;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes fade-custom {}
