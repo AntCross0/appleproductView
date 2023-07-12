@@ -60,15 +60,15 @@ export default function Home() {
 
 
   return (
-    <main id='background' className={`transition-all w-screen h-screen flex flex-col py-2 select-none`}>
-      <header>
-        <Navbar />
-      </header>
-      <div className='h-full grid grid-cols-2 place-content-center'>
-        <div className='flex flex-col py-8 space-y-12 px-36 justify-center'>
+    <main id='background' className='transition-all w-full h-screen grid grid-cols-1 grid-rows-[7%,86%,%7] sm:grid-rows-1 sm:grid-cols-2 py-2 select-none'>
+
+      <Navbar />
+
+      <div className='h-full w-screen max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 place-content-center '>
+        <div className='flex flex-col py-8 md:space-y-12 px-2 sm:px-10 md:px-20 lg:px-36 justify-center order-2 sm:order-1'>
           <h2 className='font-bold text-slate-900 text-6xl '>AirPods MAX</h2>
           <p className='text-lg text-slate-900'>a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</p>
-          <div className='flex flex-row gap-4 w-full justify-between'>
+          <div className='flex flex-col sm:flex-row gap-4 w-full justify-between'>
             <ColorOptions />
             <Buttons textColor='white' styleClass='transition-all bg-blue-600 hover:bg-blue-700 hover:scale-110 rounded-full px-8 py-2 font-bold text-white flex flex-row gap-4 justify-center items-center' text={<>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -76,7 +76,7 @@ export default function Home() {
               </svg><span>$549</span></>}></Buttons>
           </div>
         </div>
-        <div className='relative'>
+        <div className='relative order-1 sm:order-2'>
           <PrevImage counter={counter} products={products} action={handlePrev} />
           <NextImage counter={counter} products={products} action={handleNext} />
           <div id='image' className='py-20'>
