@@ -13,7 +13,7 @@
 }
 
 .fade-custom {
-    transition: color ease-in-out 10s;
+    animation: fade-custom 300ms forwards ease-in-out;
 }
 
 
@@ -44,4 +44,12 @@
     }
 }
 
-@keyframes fade-custom {}
+@keyframes fade-custom {
+    0% {
+        background-position-x: 400px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
