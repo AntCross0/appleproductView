@@ -41,8 +41,6 @@ export default function Home() {
     else {
       setCounter(counter - 1);
     }
-
-
   }
 
   useEffect(() => {
