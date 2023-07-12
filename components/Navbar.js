@@ -11,7 +11,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className='absolute top-0 w-full h-16 max-w-[1440px] mx-auto px-2 sm:px-10 md:px-20 select-none'>
+        <header className='absolute z-50 top-0 w-full h-16 mx-auto px-2 sm:px-10 md:px-20 select-none'>
             <nav className='w-full flex flex-row justify-between items-center'>
                 <div className="w-full">
                     <div className="flex items-center justify-between h-16">

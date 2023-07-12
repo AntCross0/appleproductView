@@ -10,7 +10,7 @@ export const PrevImage = ({ counter, products, action }) => {
         counter = counter - 1;
     }
     return (
-        <div className='transition-all absolute top-1/2 sm:top-12 sm:right-0 md:right-10 lg:right-4 blur-[2px]  sm:hover:scale-110' onClick={action}>
+        <div className='transition-all z-50 absolute top-1/2 sm:top-12 sm:right-0 md:right-10 lg:right-4 blur-[2px]  sm:hover:scale-110' onClick={action}>
             <Image src={products[counter].image} alt='product' width={size} height={size} />
         </div>
     )
@@ -24,7 +24,7 @@ export const NextImage = ({ counter, products, action }) => {
         counter = counter + 1;
     }
     return (
-        <div className='transition-all absolute right-0 bottom-1/2 sm:bottom-12 sm:right-0 md:right-10 lg:right-4 blur-[2px]  sm:hover:scale-110' onClick={action}>
+        <div className='transition-all z-50 absolute right-0 bottom-1/2 sm:bottom-12 sm:right-0 md:right-10 lg:right-4 blur-[2px]  sm:hover:scale-110' onClick={action}>
             <Image src={products[counter].image} alt='product' width={size} height={size} />
         </div>
     )
