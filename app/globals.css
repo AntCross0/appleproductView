@@ -51,3 +51,7 @@
         opacity: 1;
     }
 }
+
+.activeColor {
+    @apply ring-4 ring-slate-900 scale-110 !important;
+}

@@ -29,4 +29,3 @@ export const NextImage = ({ counter, products, action }) => {
         </div>
     )
 }
-
