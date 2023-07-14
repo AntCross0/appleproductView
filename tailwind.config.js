@@ -18,7 +18,7 @@ module.exports = {
         'custom-pink': '#91D68F',
         'custom-green': '#EBDBF9',
         'custom-purple': '#8FC0D6'
-      }
+      },
     },
   },
   plugins: [],
