@@ -17,10 +17,10 @@ const Navbar = () => {
                     <div className="flex items-center justify-between h-16">
                         <div className="w-full flex justify-between items-center">
                             <div className="flex-shrink-0">
-                                <div className='transition-all text-2xl font-black text-slate-900'>Airpods Max</div>
+                                <div className='transition-all text-2xl font-black text-white'>Airpods Max</div>
                             </div>
                             <div className="hidden md:block">
-                                <div className="flex justify-end items-baseline space-x-4">
+                                <div className="flex justify-end items-baseline space-x-4 text-white">
                                     <Link className='transition-all hover:scale-105' href='#'>Gallery</Link>
                                     <Link className='transition-all hover:scale-105' href='#'>Overview</Link>
                                     <Link className='transition-all hover:scale-105' href='#'>My account</Link>

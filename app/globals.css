@@ -5,11 +5,11 @@
 
 
 .prev-animation {
-    animation: prev-animation 300ms forwards ease-in-out;
+    animation: prev-animation 300ms forwards linear;
 }
 
 .next-animation {
-    animation: next-animation 300ms forwards ease-in-out;
+    animation: next-animation 300ms forwards linear;
 }
 
 .fade-custom {
