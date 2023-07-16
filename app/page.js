@@ -62,10 +62,10 @@ export default function Home() {
 
 
   return (
-    <main className={`transition-all w-screen h-screen select-none`}>
-      <div id='background' className='brightness-[0.95] h-screen absolute w-full z-0 '></div>
+    <main className={`transition-all w-full h-full select-none overflow-x-hidden`}>
+      <div id='background' className='brightness-[0.95] h-full absolute w-full z-0 '></div>
 
-      <div className='h-screen z-10 grid grid-cols-1 place-content-center py-16
+      <div className='h-full z-10 grid grid-cols-1 place-content-center py-16
       sm:grid-cols-2 sm:py-8
       md:py-36'>
         <div className='flex z-10 flex-col-reverse space-y-4 px-4 justify-center order-2
