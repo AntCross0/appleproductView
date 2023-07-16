@@ -62,14 +62,14 @@ export default function Home() {
 
 
   return (
-    <main className={`transition-all w-full h-full select-none overflow-x-hidden`}>
+    <main className={`transition-all w-full h-full select-none overflow-x-hidden min-w-[390px]`}>
       <div id='background' className='brightness-[0.95] h-full absolute w-full z-0 '></div>
 
       <div className='h-full z-10 grid grid-cols-1 place-content-center py-16
       sm:grid-cols-2 sm:py-8
       md:py-36'>
-        <div className='flex z-10 flex-col-reverse space-y-4 px-4 justify-center order-2
-        sm:flex-col sm:order-1
+        <div className='flex z-10 flex-col  space-y-4 px-4 justify-center order-2
+        sm:order-1
         md:px-20 '>
           <h2 className='font-bold text-white text-6xl '>AirPods MAX</h2>
           <p className='text-lg text-white'>a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</p>

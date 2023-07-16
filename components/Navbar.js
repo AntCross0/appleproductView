@@ -27,7 +27,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="transition-all -mr-2 flex md:hidden">
+                        <div className="transition-all flex md:hidden">
                             <button id="hamburger-btn" onClick={handleToggle} type="button" className=" bg-slate-100/20 backdrop-blur-md inline-flex items-center justify-center p-2 rounded-md text-secundary-color hover:text-[#1E1E1E] hover:bg-secundary-color focus:outline-none ">
                                 <span className="sr-only">Menu</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
