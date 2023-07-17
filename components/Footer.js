@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <footer className='absolute z-50 bottom-0 w-full h-12 py-2 flex flex-col gap-2 md:flex-row justify-between items-center px-20 border-t-2 border-white border-opacity-20 select-none backdrop-blur-md'>
+        <footer className='absolute z-50 bottom-0 w-full h-16 py-2 flex flex-col gap-2 sm:flex-row justify-between items-center px-20 border-t-2 border-white border-opacity-20 select-none backdrop-blur-md'>
 
-            <h4 className='text-white font-normal md:font-bold truncate'>This is a live demo created by Anthony Gomez.</h4>
+            <h4 className='text-white text-xs sm:text-lg font-medium truncate'>This is a live demo created by Anthony Gomez.</h4>
 
             <div className='transition-all flex flex-row gap-x-12 text-white font-semibold'>
                 <Link className=' transition-all hover:scale-105' href='#'>

@@ -65,7 +65,7 @@ export default function Home() {
     <main className={`transition-all w-full h-full select-none overflow-x-hidden `}>
       <div id='background' className='brightness-[0.90] h-full absolute w-full z-0 '></div>
 
-      <div className='h-full z-10 inline-grid grid-cols-1 place-content-center py-8
+      <div className='h-full z-10 inline-grid grid-cols-1 place-content-center pb-20
       sm:grid-cols-2 sm:py-8 sm:mt-0
       md:p-24
       '>
