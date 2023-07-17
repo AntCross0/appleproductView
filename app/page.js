@@ -62,20 +62,22 @@ export default function Home() {
 
 
   return (
-    <main className={`transition-all w-full h-full select-none overflow-x-hidden min-w-[390px]`}>
-      <div id='background' className='brightness-[0.95] h-full absolute w-full z-0 '></div>
+    <main className={`transition-all w-full h-full select-none overflow-x-hidden `}>
+      <div id='background' className='brightness-[0.90] h-full absolute w-full z-0 '></div>
 
-      <div className='h-full z-10 grid grid-cols-1 place-content-center py-16
-      sm:grid-cols-2 sm:py-8
-      md:py-36'>
+      <div className='h-full z-10 inline-grid grid-cols-1 place-content-center py-8
+      sm:grid-cols-2 sm:py-8 sm:mt-0
+      md:p-24
+      '>
         <div className='flex z-10 flex-col  space-y-4 px-4 justify-center order-2
         sm:order-1
         md:px-20 '>
-          <h2 className='font-bold text-white text-6xl '>AirPods MAX</h2>
+          <h2 className='font-bold text-white text-6xl'>AirPods MAX</h2>
           <p className='text-lg text-white'>a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</p>
           <div className='flex flex-col gap-4 w-full justify-between
           sm:flex-row
           '>
+
             <ColorOptions counter={counter} />
             <Buttons textColor='white' styleClass='transition-all bg-blue-600 hover:bg-blue-700 hover:scale-110 rounded-full px-8 py-2 font-bold text-white flex flex-row gap-4 justify-center items-center' text={<>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
