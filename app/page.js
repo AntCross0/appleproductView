@@ -3,12 +3,9 @@
 import Image from 'next/image';
 import { products } from '@/data/products';
 import Buttons from '@/components/Buttons';
-import ColorOptions from '@/components/ColorOptions';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { NextImage, PrevImage } from '@/components/PrevAndNext';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
 
 
